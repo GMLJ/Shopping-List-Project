@@ -10,27 +10,32 @@ export default function AddTodo({ submitHandler }) {
 
   return (
     <View>
-      <TextInput
-        style={StyleSheet.input}
-        placeholder="new migib..."
-        onChangeText={changeHandler}
-      />
-      <Button
-        onPress={() => submitHandler(text)}
-        title="add Mibela"
-        color="coral"
-      />
+      <View style={styles.container}>
+        <TextInput
+          style={StyleSheet.input}
+          placeholder="new migib..."
+          onChangeText={changeHandler}
+        />
+      </View>
+      <View>
+        <Button
+          onPress={() => submitHandler(text)}
+          title="add Mibela"
+          color="#DC332E"
+        />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  input: {
+  container: {
     marginBottom: 10,
     paddingHorizontal: 8,
     paddingVertical: 6,
     borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
+    borderColor: "#ddd",
     borderWidth: 1,
+    borderRadius: 5,
   },
 });
