@@ -13,14 +13,14 @@ export default function AddTodo({ submitHandler }) {
       <View style={styles.container}>
         <TextInput
           style={StyleSheet.input}
-          placeholder="new migib..."
+          placeholder="new item..."
           onChangeText={changeHandler}
         />
       </View>
       <View>
         <Button
           onPress={() => submitHandler(text)}
-          title="add Mibela"
+          title="add item"
           color="#DC332E"
         />
       </View>

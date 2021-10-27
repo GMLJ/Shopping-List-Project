@@ -14,9 +14,7 @@ import AddTodo from "./components/addTodo";
 import Sandbox from "./components/sandbox";
 
 export default function App() {
-  const [todos, setTodos] = useState([
-    { text: "Hi Love ! Ere min inibla?", key: "1" },
-  ]);
+  const [todos, setTodos] = useState([{ text: "1st item", key: "1" }]);
 
   const pressHandler = (key) => {
     setTodos((prevTodos) => {
@@ -26,9 +24,9 @@ export default function App() {
 
   const submitHandler = (text) => {
     if (text.toLowerCase() === "coca") {
-      Alert.alert("Antchi!", "Coca Kula aybekamwey? Lil'Fatty", [
+      Alert.alert("Easy on the coke", [
         {
-          text: "Yibekal yene fikir",
+          text: "Add anyways",
           onPress: () => console.log("Alert closed"),
         },
       ]);
@@ -38,16 +36,12 @@ export default function App() {
         return [{ text: text, key: Math.random().toString() }, ...prevTodos];
       });
     } else {
-      Alert.alert(
-        "OOPS!",
-        "Too short ! This can't be a word ma belle, doesn't make sense ! Am I supposed to guess what it is?",
-        [
-          {
-            text: "Chef Oui Chef !",
-            onPress: () => console.log("Alert closed"),
-          },
-        ]
-      );
+      Alert.alert("OOPS!", "Too short ! Am I supposed to guess what this is?", [
+        {
+          text: "Sir yes sir !",
+          onPress: () => console.log("Alert closed"),
+        },
+      ]);
     }
   };
 
